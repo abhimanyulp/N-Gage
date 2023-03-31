@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/style/checkout.css">
+</head>
+<body>
+    <div id="navbar">
+        <div id="nav-left">
+            <img src="./media/logo.png" alt="error" id="home">
+        </div>
+        <div id="nav-right">
+            <a href="products.html">Products</a>
+            <a href="">Blog</a>
+            <a href="">About</a>
+            <div id="login">
+                <button id="login-btn">Login</button>
+                <button id="signup-btn">Sign-up</button>
+            </div>
+            <div id="logout">
+                <button id="logout-btn">Log-out</button>
+                <button id="myplan-btn">My plan</button>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="plan-checkout">
+            <div id="basic" class="plan">
+                <div class="plan-tag">Basic</div>
+                <div class="plan-price">
+                    <h1>$12.74</h1>
+                    <p>per user / month</p>
+                </div>
+                <div class="plan-details">
+                    <h3>✔️ 500 Contacts</h3>
+                    <h3>✔️ Email Templates</h3>
+                    <h3>✔️ Web Pop-ups</h3>
+                    <h3>✔️ Landing Page Builder</h3>
+                    <h3>✔️ Lead Scoring</h3>
+                    <h3>✔️ SMS Marketing</h3>
+                    <h3>✔️ 3rd Party Integrations</h3>
+                    <h3>✔️ Social Suite</h3>
+                    <h3>✔️ Tag Manager</h3>
+                </div>
+            </div>
+            <div id="growth" class="plan">
+                <div class="plan-tag">Growth</div>
+                <div class="plan-price">
+                    <h1>$42.49</h1>
+                    <p>per user / month</p>
+                </div>
+                <div class="plan-details">
+                    <h3>✔️ 5000 Contacts</h3>
+                    <h3>✔️ Marketing Automation</h3>
+                    <h3>✔️ Push Notifications</h3>
+                    <h3>✔️ Site Messages</h3>
+                    <h3>✔️ Broadcast A/B Testing</h3>
+                    <h3>✔️ Landing Page A/B Testing</h3>
+                    <h3>✔️ Custom Domain</h3>
+                    <h3>✔️ Call Records</h3>
+                    <h3>✔️ Service Automation</h3>
+                    <h3>✔️ Products</h3>
+                    <h3>✔️ Proposals</h3>
+                </div>
+            </div>
+            <div id="pro" class="plan">
+                <div class="plan-tag">Pro</div>
+                <div class="plan-price">
+                    <h1>$84.99</h1>
+                    <p>per user / month</p>
+                </div>
+                <div class="plan-details">
+                    <h3>✔️ Unlimited Contacts</h3>
+                    <h3>✔️ Marketing Automation</h3>
+                    <h3>✔️ Web Analytics</h3>
+                    <h3>✔️ Proposal Analytics</h3>
+                    <h3>✔️ SSO</h3>
+                    <h3>✔️ Role Management</h3>
+                    <h3>✔️ Goals</h3>
+                    <h3>✔️ Custom Reporting</h3>
+                    <h3>✔️ Dedicated Account Manager</h3>
+                    <h3>✔️ Uptime SLA</h3>
+                    <h3>✔️ Phone Support</h3>
+                </div>
+            </div>
+        </div>
+        <div id="details-checkout">
+            <div id="email-checkout">
+                <h1>Email:</h1>
+                <h1 id="email-display"></h1>
+            </div>
+            <div id="payment-checkout">
+                <h1>Payment</h1>
+                <form action="">
+                    <input type="text" placeholder="Name" id="nameIn">
+                    <input type="number" placeholder="Card No." id="cardIn">
+                    <input type="date" placeholder="Expiry" id="expiryIn">
+                    <input type="number" placeholder="CVV" id="cvvIn">
+                    <button id="submitBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="otp-box">
+        <h1>Please Enter OTP</h1>
+        <form action="#">
+            <div id="input-field">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="otp-1">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="otp-2">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="otp-3">
+                <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="otp-4">
+            </div>
+        </form>
+        <input id="input-btn" type="submit">
+    </div>
+</body>
+<script src="/script/checkout.js"></script>
+</html>
