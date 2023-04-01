@@ -7,16 +7,21 @@ let loginEl = document.getElementById("login")
 let logoutEl = document.getElementById("logout")
 let logoutBtn = document.getElementById("logout-btn");
 
+let myplanBtn = document.getElementById("myplan-btn");
+
+myplanBtn.addEventListener("click", () => {
+    window.location.href = "/myplan.html"
+})
 
 homeLogo.addEventListener("click", () => {
     window.location.href = "/index.html"
 })
 
-signupBtn.addEventListener("click",()=>{
+signupBtn.addEventListener("click", () => {
     window.location.href = "/signup.html"
 })
 
-loginBtn.addEventListener("click",()=>{
+loginBtn.addEventListener("click", () => {
     window.location.href = "/login.html"
 })
 
@@ -48,23 +53,42 @@ let proBtn = document.getElementById("pro-btn");
 
 
 
-freeBtn.addEventListener("click",()=>{
+freeBtn.addEventListener("click", () => {
     // localStorage.setItem("plan","free")
     // window.location.href = "/checkout.html"
-    alert("Already on Free plan")
+    if (lsEmail) {
+        alert("Cannot Buy Free Plan")
+    } else {
+        alert("Please Login First")
+    }
 })
 
-basicBtn.addEventListener("click",()=>{
-    localStorage.setItem("plan","basic")
-    window.location.href = "/checkout.html"
+basicBtn.addEventListener("click", () => {
+    if (lsEmail) {
+        localStorage.setItem("plan", "basic")
+        window.location.href = "/checkout.html"
+    } else {
+        alert("Please Login First")
+    }
+
 })
 
-growthBtn.addEventListener("click",()=>{
-    localStorage.setItem("plan","growth")
-    window.location.href = "/checkout.html"
+growthBtn.addEventListener("click", () => {
+    if (lsEmail) {
+        localStorage.setItem("plan", "growth")
+        window.location.href = "/checkout.html"
+    } else {
+        alert("Please Login First")
+    }
+
 })
 
-proBtn.addEventListener("click",()=>{
-    localStorage.setItem("plan","pro")
-    window.location.href = "/checkout.html"
+proBtn.addEventListener("click", () => {
+    if (lsEmail) {
+        localStorage.setItem("plan", "pro")
+        window.location.href = "/checkout.html"
+    } else {
+        alert("Please Login First")
+    }
+
 })

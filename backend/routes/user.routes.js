@@ -1,6 +1,7 @@
 const express = require("express");
 const userRouter = express.Router();
 const { UserModel } = require("../model/user.model");
+const { auth } = require("../middleware/auth.middlware");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
@@ -48,12 +49,24 @@ userRouter.post("/login", async (req, res) => {
 userRouter.patch("/update/:emailID", async (req,res)=>{
     const {emailID} = req.params;
     const payload = req.body;
-    console.log("hi")
     try{
         await UserModel.findOneAndUpdate({email:emailID},payload)
         res.status(200).send({"msg":"User has been updated"})
     }catch(err){
         res.status(400).send({"msg":err.message})
+    }
+})
+
+
+
+//Read User(s)
+userRouter.get("/:emailID", auth, async (req,res)=>{
+    const {emailID} = req.params;
+    try{
+        const user = await UserModel.findOne({ email:emailID });
+        res.status(200).send(user);
+    }catch(err){
+        res.status(400).send({"msg":err.message});
     }
 })
 

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="/style/products.css">
+    <title>My Plan</title>
+    <link rel="stylesheet" href="/style/myplan.css">
 </head>
 <body>
     <div id="navbar">
@@ -13,7 +13,7 @@
             <img src="./media/logo.png" alt="error" id="home">
         </div>
         <div id="nav-right">
-            <a href=#>Products</a>
+            <a href="./products.html">Products</a>
             <a href="./blog.html">Blog</a>
             <a href="./about.html">About</a>
             <div id="login">
@@ -26,11 +26,7 @@
             </div>
         </div>
     </div>
-    <div id="heading">
-        <h1>Get the Whole Stack, or Just the Pieces you Need</h1>
-        <h3>Completely FREE Migration Service from Any Other Platform. No Hassles.</h3>
-    </div>
-    <div id="plan-box">
+    <div id="myplan">
         <div id="free" class="plan">
             <div class="plan-tag">Free</div>
             <div class="plan-price">
@@ -49,7 +45,6 @@
                 <h3>✔️ Helpdesk</h3>
                 <h3>✔️ Live Chat</h3>
             </div>
-            <button class="button-plan" id="free-btn">Buy Now</button>
         </div>
         <div id="basic" class="plan">
             <div class="plan-tag">Basic</div>
@@ -68,7 +63,6 @@
                 <h3>✔️ Social Suite</h3>
                 <h3>✔️ Tag Manager</h3>
             </div>
-            <button class="button-plan" id="basic-btn">Buy Now</button>
         </div>
         <div id="growth" class="plan">
             <div class="plan-tag">Growth</div>
@@ -89,7 +83,6 @@
                 <h3>✔️ Products</h3>
                 <h3>✔️ Proposals</h3>
             </div>
-            <button class="button-plan" id="growth-btn">Buy Now</button>
         </div>
         <div id="pro" class="plan">
             <div class="plan-tag">Pro</div>
@@ -110,9 +103,17 @@
                 <h3>✔️ Uptime SLA</h3>
                 <h3>✔️ Phone Support</h3>
             </div>
-            <button class="button-plan" id="pro-btn">Buy Now</button>
+        </div>
+        <div class="upgrade">
+            <h1>Wants to upgrade a plan? <br> Choose below ➡️</h1>
+            <select name="update" id="update-switch">
+                <option value="">Choose Plan</option>
+                <option value="basic">Basic</option>
+                <option value="growth">Growth</option>
+                <option value="pro">Pro</option>
+            </select>
         </div>
     </div>
 </body>
-<script src="./script/products.js"></script>
+<script src="/script/myplan.js"></script>
 </html>
