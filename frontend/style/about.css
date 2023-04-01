@@ -1,0 +1,88 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index:1;
+    /* border: 2px solid red; */
+
+}
+#nav-left {
+    width: 50%;
+    margin: auto;
+    /* border: 2px solid black; */
+}
+#nav-left > img {
+    width: 200px;
+    margin-left: 80px;
+}
+#nav-right {
+    /* border: 2px solid blue; */
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#nav-right > a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Login div */
+#login {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+#login > button {
+    width: 110px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+#login > button:first-child {
+    color: white;
+    background-color:#CADFDF;
+}
+#login > button:nth-child(2) {
+    color: white;
+    background-color:#F9B347;
+}
+
+/* logout div */
+#logout {
+    width: 35%;
+    justify-content: space-between;
+    display: none;
+}
+
+#logout > button {
+    width: 110px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+#logout > button:first-child {
+    color: white;
+    background-color:#CADFDF;
+}
+#logout > button:nth-child(2) {
+    color: white;
+    background-color:#F9B347;
+}
+
+#main {
+    text-align: center;
+    padding: 100px 200px;
+}
+#main > h1{
+    margin: 50px;
+}

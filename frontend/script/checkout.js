@@ -80,6 +80,13 @@ let emailEl = document.getElementById("email-display");
 emailEl.innerText = lsEmail
 
 
+let myplanBtn = document.getElementById("myplan-btn");
+
+myplanBtn.addEventListener("click",()=>{
+    window.location.href = "/myplan.html"
+})
+
+
 //OTP button addEventListener
 otpBtn.addEventListener("click", () => {
 
@@ -95,7 +102,7 @@ otpBtn.addEventListener("click", () => {
             window.location.href = "index.html"
         }, 4000)
 
-        alert("Order Placed Successfuly");
+        alert("Plan Activated Successfuly");
 
     } else {
         alert("Please Enter Correct OTP")
@@ -177,7 +184,7 @@ function backend() {
     })
         .then(res => res.json())
         .then(data => {
-            alert(data.msg);
+            console.log(data.msg);
         })
         .catch(err => {
             console.log(err)

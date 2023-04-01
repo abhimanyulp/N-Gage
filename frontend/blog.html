@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="./style/login.css">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./style/blog.css">
 </head>
 
 <body>
@@ -16,28 +16,33 @@
         </div>
         <div id="nav-right">
             <a href="./products.html">Products</a>
-            <a href="./blog.html">Blog</a>
+            <a href=#>Blog</a>
             <a href="./about.html">About</a>
             <div id="login">
-                <button>Login</button>
+                <button id="login-btn">Login</button>
                 <button id="signup-btn">Sign-up</button>
+            </div>
+            <div id="logout">
+                <button id="logout-btn">Log-out</button>
+                <button id="myplan-btn">My plan</button>
             </div>
         </div>
     </div>
     <div id="main">
-        <div id="signup-box">
-            <h1>Login</h1>
-            <p>Don't have an account yet? Sign up</p>
+        <div id="left">
+            <h1>Add Post</h1>
             <form action="">
-                <input type="email" placeholder="Username/Email" id="emailIn">
-                <input type="text" placeholder="Password" id="passIn">
-                <button id="submitBtn">Submit</button>
+                <input type="text" placeholder="Title" id="title">
+                <input type="text" placeholder="Add Post" id="post">
+                <button id="post-submit-btn">Submit</button>
             </form>
 
-
+        </div>
+        <div id="right">
+            <!-- append posts here -->
         </div>
     </div>
 </body>
-<script src="./script/login.js"></script>
+<script src="./script/blog.js"></script>
 
 </html>
