@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-//user schema
+//USER Schema
 const userSchema = mongoose.Schema({
     name: String,
     email: String,
@@ -13,6 +13,6 @@ const userSchema = mongoose.Schema({
     versionKey:false
 })
 
-const UserModel = mongoose.model("user",userSchema);
+const UserModel = mongoose.model("user", userSchema);
 
 module.exports = {UserModel};

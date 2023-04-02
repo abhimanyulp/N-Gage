@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 
-// registeration
+//Registeration
 userRouter.post("/register", async (req, res) => {
     const { name, email, pass, mobile, website, plan } = req.body;
     try {
@@ -22,7 +22,8 @@ userRouter.post("/register", async (req, res) => {
     }
 })
 
-//login
+
+//Login
 userRouter.post("/login", async (req, res) => {
     const { email, pass } = req.body
     try {
@@ -58,7 +59,6 @@ userRouter.patch("/update/:emailID", async (req,res)=>{
 })
 
 
-
 //Read User(s)
 userRouter.get("/:emailID", auth, async (req,res)=>{
     const {emailID} = req.params;
@@ -69,7 +69,6 @@ userRouter.get("/:emailID", auth, async (req,res)=>{
         res.status(400).send({"msg":err.message});
     }
 })
-
 
 
 

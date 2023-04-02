@@ -1,4 +1,4 @@
-const baseServerURL = "http://localhost:4500"
+const baseServerURL = "https://clean-erin-dog.cyclic.app"
 
 let homeLogo = document.getElementById("home")
 let signupBtn = document.getElementById("signup-btn")
@@ -12,6 +12,15 @@ let logoutEl = document.getElementById("logout")
 let logoutBtn = document.getElementById("logout-btn");
 
 let myplanBtn = document.getElementById("myplan-btn");
+
+let title_add = document.getElementById("title");
+let body_add = document.getElementById("post");
+let postBtn = document.getElementById("post-submit-btn");
+let postEl = document.getElementById("right");
+
+
+// <-------------Event Listerners--------------->
+
 
 homeLogo.addEventListener("click", () => {
     window.location.href = "/index.html"
@@ -46,18 +55,8 @@ logoutBtn.addEventListener("click", (e) => {
 })
 
 
-
-
-let title_add = document.getElementById("title");
-let body_add = document.getElementById("post");
-
-let postBtn = document.getElementById("post-submit-btn");
-
-
 getallposts()
 
-
-let postEl = document.getElementById("right");
 
 //Add Post
 postBtn.addEventListener("click", (e) => {
@@ -92,6 +91,8 @@ postBtn.addEventListener("click", (e) => {
 
 })
 
+
+// <--------------Functions-------------------->
 
 
 function getallposts() {

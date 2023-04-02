@@ -9,6 +9,16 @@ let logoutBtn = document.getElementById("logout-btn");
 
 let myplanBtn = document.getElementById("myplan-btn");
 
+let freeBtn = document.getElementById("free-btn");
+let basicBtn = document.getElementById("basic-btn");
+let growthBtn = document.getElementById("growth-btn");
+let proBtn = document.getElementById("pro-btn");
+
+
+
+// <-------------Event Listerners--------------->
+
+
 myplanBtn.addEventListener("click", () => {
     window.location.href = "/myplan.html"
 })
@@ -46,16 +56,9 @@ logoutBtn.addEventListener("click", (e) => {
 
 
 
-let freeBtn = document.getElementById("free-btn");
-let basicBtn = document.getElementById("basic-btn");
-let growthBtn = document.getElementById("growth-btn");
-let proBtn = document.getElementById("pro-btn");
-
 
 
 freeBtn.addEventListener("click", () => {
-    // localStorage.setItem("plan","free")
-    // window.location.href = "/checkout.html"
     if (lsEmail) {
         alert("Cannot Buy Free Plan")
     } else {

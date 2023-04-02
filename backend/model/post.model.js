@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-//user schema
+//POST Schema
 const postSchema = mongoose.Schema({
     name: String,
     title: String,
