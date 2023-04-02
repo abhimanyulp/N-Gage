@@ -1,11 +1,10 @@
+let lsEmail = localStorage.getItem("email")
+
 let signupBtn = document.getElementById("signup-btn")
 let loginBtn = document.getElementById("login-btn")
-
-let lsEmail = localStorage.getItem("email")
 let loginEl = document.getElementById("login")
 let logoutEl = document.getElementById("logout")
 let logoutBtn = document.getElementById("logout-btn");
-
 let myplanBtn = document.getElementById("myplan-btn");
 
 myplanBtn.addEventListener("click",()=>{

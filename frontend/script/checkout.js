@@ -1,5 +1,9 @@
 
-const baseServerURL = "http://localhost:4500"
+const baseServerURL = "https://clean-erin-dog.cyclic.app"
+
+//Local storage
+let userAuthToken = localStorage.getItem("localAccessToken") || null;
+let lsData = localStorage.getItem("email")
 
 let homeLogo = document.getElementById("home")
 let signupBtn = document.getElementById("signup-btn")
@@ -9,37 +13,6 @@ let lsEmail = localStorage.getItem("email")
 let loginEl = document.getElementById("login")
 let logoutEl = document.getElementById("logout")
 let logoutBtn = document.getElementById("logout-btn");
-
-
-homeLogo.addEventListener("click", () => {
-    window.location.href = "/index.html"
-})
-
-signupBtn.addEventListener("click", () => {
-    window.location.href = "/signup.html"
-})
-
-loginBtn.addEventListener("click", () => {
-    window.location.href = "/login.html"
-})
-
-
-window.addEventListener("load", (e) => {
-
-    if (lsEmail) {
-        loginEl.style.display = "none";
-        logoutEl.style.display = "flex";
-    }
-})
-
-
-logoutBtn.addEventListener("click", (e) => {
-    localStorage.setItem("email", "")
-    localStorage.setItem("localAccessToken", "")
-    location.reload()
-})
-
-
 
 let otpEl = document.getElementById("otp-box");
 let otpBtn = document.getElementById("input-btn");
@@ -58,13 +31,54 @@ let cvvIn = document.getElementById("cvvIn");
 
 let OrderBtn = document.getElementById("submitBtn")
 
-
-
 let basicEl = document.getElementById("basic");
 let growthEl = document.getElementById("growth");
 let proEl = document.getElementById("pro");
 
 let plan_checkout = localStorage.getItem("plan")
+
+let emailEl = document.getElementById("email-display");
+let myplanBtn = document.getElementById("myplan-btn");
+
+
+
+// <-------------Event Listerners--------------->
+
+
+
+homeLogo.addEventListener("click", () => {
+    window.location.href = "/index.html"
+})
+
+signupBtn.addEventListener("click", () => {
+    window.location.href = "/signup.html"
+})
+
+loginBtn.addEventListener("click", () => {
+    window.location.href = "/login.html"
+})
+
+myplanBtn.addEventListener("click",()=>{
+    window.location.href = "/myplan.html"
+})
+
+window.addEventListener("load", (e) => {
+
+    if (lsEmail) {
+        loginEl.style.display = "none";
+        logoutEl.style.display = "flex";
+    }
+})
+
+logoutBtn.addEventListener("click", (e) => {
+    localStorage.setItem("email", "")
+    localStorage.setItem("localAccessToken", "")
+    location.reload()
+})
+
+
+
+
 
 if (plan_checkout == "basic") {
     basicEl.style.display = "block"
@@ -74,17 +88,11 @@ if (plan_checkout == "basic") {
     proEl.style.display = "block"
 }
 
-
-let emailEl = document.getElementById("email-display");
-
 emailEl.innerText = lsEmail
 
 
-let myplanBtn = document.getElementById("myplan-btn");
 
-myplanBtn.addEventListener("click",()=>{
-    window.location.href = "/myplan.html"
-})
+
 
 
 //OTP button addEventListener
@@ -132,6 +140,9 @@ OrderBtn.addEventListener("click", (e) => {
 
 
 
+// <--------------Functions-------------------->
+
+
 //OTP Generate function
 function GenerateOTP() {
     var otp = []
@@ -159,10 +170,6 @@ function validate() {
 }
 
 
-
-//Local storage
-let userAuthToken = localStorage.getItem("localAccessToken") || null;
-let lsData = localStorage.getItem("email")
 
 
 //Backend POST function

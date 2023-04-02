@@ -9,6 +9,10 @@ let logoutBtn = document.getElementById("logout-btn");
 
 let myplanBtn = document.getElementById("myplan-btn");
 
+
+// <-------------Event Listerners--------------->
+
+
 homeLogo.addEventListener("click", () => {
     window.location.href = "/index.html"
 })

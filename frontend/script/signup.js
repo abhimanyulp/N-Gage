@@ -1,5 +1,4 @@
-const baseServerURL = "http://localhost:4500"
-
+const baseServerURL = "https://clean-erin-dog.cyclic.app"
 
 let nameIn = document.getElementById("nameIn")
 let emailIn = document.getElementById("emailIn")
@@ -8,19 +7,19 @@ let numIn = document.getElementById("numIn")
 let webIn = document.getElementById("webIn")
 let submitBtn = document.getElementById("submitBtn")
 
-
 let homeLogo = document.getElementById("home")
 let loginBtn = document.getElementById("login-btn")
 
 
-homeLogo.addEventListener("click",()=>{
+// <-------------Event Listerners--------------->
+
+homeLogo.addEventListener("click", () => {
     window.location.href = "/index.html"
 })
 
-loginBtn.addEventListener("click",()=>{
+loginBtn.addEventListener("click", () => {
     window.location.href = "/login.html"
 })
-
 
 
 submitBtn.addEventListener("click", (e) => {
@@ -57,14 +56,14 @@ submitBtn.addEventListener("click", (e) => {
 })
 
 
-    // <--------------Functions-------------------->
+// <--------------Functions-------------------->
 
-    function validate(obj) {
+function validate(obj) {
 
-        if (obj.name == "" || obj.email == "" || obj.pass == "" || obj.mobile == "" || obj.website == "") {
-            alert("Please Fill The Form")
-            return false;
-        } else {
-            return true;
-        }
+    if (obj.name == "" || obj.email == "" || obj.pass == "" || obj.mobile == "" || obj.website == "") {
+        alert("Please Fill The Form")
+        return false;
+    } else {
+        return true;
     }
+}

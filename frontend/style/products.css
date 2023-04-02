@@ -114,6 +114,9 @@
     text-align: center;
     margin: auto;
 }
+#growth > div:first-child {
+    width: 80px;
+}
 .plan-price {
     text-align: center;
     /* border: 1px solid red; */

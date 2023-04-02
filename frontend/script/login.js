@@ -1,15 +1,14 @@
-const baseServerURL = "http://localhost:4500"
-
-
+const baseServerURL = "https://clean-erin-dog.cyclic.app"
 
 let emailIn = document.getElementById("emailIn")
 let passIn = document.getElementById("passIn")
 let submitBtn = document.getElementById("submitBtn")
 
-
 let homeLogo = document.getElementById("home")
 let signupBtn = document.getElementById("signup-btn")
 
+
+// <-------------Event Listerners--------------->
 
 homeLogo.addEventListener("click", () => {
     window.location.href = "/index.html"
