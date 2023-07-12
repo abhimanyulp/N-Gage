@@ -1,4 +1,4 @@
-const baseServerURL = "https://clean-erin-dog.cyclic.app"
+const baseServerURL = "https://calm-pink-turtle-suit.cyclic.app"
 
 let nameIn = document.getElementById("nameIn")
 let emailIn = document.getElementById("emailIn")

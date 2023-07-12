@@ -1,5 +1,5 @@
 
-const baseServerURL = "https://clean-erin-dog.cyclic.app"
+const baseServerURL = "https://calm-pink-turtle-suit.cyclic.app"
 
 let userAuthToken = localStorage.getItem("localAccessToken") || null;
 let lsEmail = localStorage.getItem("email")

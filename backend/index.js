@@ -19,8 +19,9 @@ app.get("/", (req, res) => {
 app.use("/users", userRouter);
 app.use("/posts", postRouter);
 
+const Port = process.env.Port || 8000
 
-app.listen(process.env.port, async () => {
+app.listen(Port, async () => {
     try {
         await connection;
         console.log("Connected to MongoDB");
