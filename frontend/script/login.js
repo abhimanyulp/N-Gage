@@ -1,4 +1,4 @@
-const baseServerURL = "https://calm-pink-turtle-suit.cyclic.app"
+const baseServerURL = "https://n-gage.onrender.com"
 
 let emailIn = document.getElementById("emailIn")
 let passIn = document.getElementById("passIn")

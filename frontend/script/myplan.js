@@ -1,5 +1,5 @@
 
-const baseServerURL = "https://calm-pink-turtle-suit.cyclic.app"
+const baseServerURL = "https://n-gage.onrender.com"
 
 let userAuthToken = localStorage.getItem("localAccessToken") || null;
 let lsEmail = localStorage.getItem("email")
