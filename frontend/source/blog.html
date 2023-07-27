@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/styles/blog.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <nav id="navbar"></nav> <!-- Importing it using jquery  -->
+
+    <main id="main">
+        <div id="left">
+            <h1>Add Post</h1>
+            <form action="">
+                <input type="text" placeholder="Title" id="title">
+                <input type="text" placeholder="Add Post" id="post">
+                <button id="post-submit-btn">Submit</button>
+            </form>
+
+        </div>
+        <div id="right">
+            <!-- append posts here -->
+        </div>
+    </main>
+
+    <footer id="footer"></footer> <!-- Importing it using jquery  -->
+</body>
+<script>
+    $(function () {
+        $("#navbar").load("navbar.html");
+    });
+    $(function () {
+        $("#footer").load("footer.html");
+    });
+</script>
+<script src="/scripts/blog.js"></script>
+
+</html>

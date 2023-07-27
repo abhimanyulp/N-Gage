@@ -4,10 +4,6 @@ const baseServerURL = "https://n-gage.onrender.com"
 let userAuthToken = localStorage.getItem("localAccessToken") || null;
 let lsEmail = localStorage.getItem("email")
 
-let homeLogo = document.getElementById("home")
-let loginEl = document.getElementById("login")
-let logoutEl = document.getElementById("logout")
-let logoutBtn = document.getElementById("logout-btn");
 let updateSwitch = document.getElementById("update-switch");
 
 let freeEl = document.getElementById("free");
@@ -16,34 +12,6 @@ let growthEl = document.getElementById("growth");
 let proEl = document.getElementById("pro");
 
 fetching()
-
-
-// <-------------Event Listerners--------------->
-
-
-updateSwitch.addEventListener("change", () => {
-    localStorage.setItem("plan", updateSwitch.value)
-    window.location.href = "/checkout.html"
-})
-
-homeLogo.addEventListener("click", () => {
-    window.location.href = "/index.html"
-})
-
-window.addEventListener("load", (e) => {
-
-    if (lsEmail) {
-        loginEl.style.display = "none";
-        logoutEl.style.display = "flex";
-    }
-})
-
-logoutBtn.addEventListener("click", (e) => {
-    localStorage.setItem("email", "")
-    localStorage.setItem("localAccessToken", "")
-    window.location.href = "/index.html"
-})
-
 
 // <--------------Functions-------------------->
 

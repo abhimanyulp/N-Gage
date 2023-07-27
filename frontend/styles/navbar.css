@@ -1,9 +1,3 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 #navbar {
     width: 100%;
     height: 60px;
@@ -20,7 +14,7 @@
     margin: auto;
     /* border: 2px solid black; */
 }
-#nav-left > img {
+#nav-left > a > img {
     width: 200px;
     margin-left: 80px;
 }
@@ -42,19 +36,26 @@
     display: flex;
     justify-content: space-between;
 }
-#login > button {
+#login > a > button {
     width: 110px;
     height: 35px;
     border: none;
     border-radius: 5px;
 }
-#login > button:first-child {
+#login > a:first-child >  button {
     color: white;
     background-color:#CADFDF;
 }
-#login > button:nth-child(2) {
+#login > a:nth-child(2) > button {
     color: white;
     background-color:#F9B347;
+}
+
+#login > a:first-child >  button:hover,
+#login > a:nth-child(2) > button:hover {
+    /* color: black; */
+    background-color:black;
+    cursor: pointer;
 }
 
 /* logout div */
@@ -64,25 +65,24 @@
     display: none;
 }
 
-#logout > button {
+#logout > a > button {
     width: 110px;
     height: 35px;
     border: none;
     border-radius: 5px;
 }
-#logout > button:first-child {
+#logout > a:first-child >  button {
     color: white;
     background-color:#CADFDF;
 }
-#logout > button:nth-child(2) {
+#logout > a:nth-child(2) > button {
     color: white;
     background-color:#F9B347;
 }
 
-#main {
-    text-align: center;
-    padding: 100px 200px;
-}
-#main > h1{
-    margin: 50px;
+#logout > a:first-child >  button:hover,
+#logout > a:nth-child(2) > button:hover {
+    /* color: black; */
+    background-color:black;
+    cursor: pointer;
 }

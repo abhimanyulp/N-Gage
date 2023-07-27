@@ -6,25 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up</title>
-    <link rel="stylesheet" href="./style/signup.css">
+    <link rel="stylesheet" href="/styles/signup.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
-    <div id="navbar">
-        <div id="nav-left">
-            <img src="./media/logo.png" alt="error" id="home">
-        </div>
-        <div id="nav-right">
-            <a href="./products.html">Products</a>
-            <a href="./blog.html">Blog</a>
-            <a href="./about.html">About</a>
-            <div id="login">
-                <button id="login-btn">Login</button>
-                <button>Sign-up</button>
-            </div>
-        </div>
-    </div>
-    <div id="main">
+    <nav id="navbar"></nav> <!-- Importing it using jquery  -->
+
+    <main id="main">
         <div id="signup-box">
             <h1>Get Started for FREE</h1>
             <p>Already have an account? Login</p>
@@ -39,8 +28,18 @@
 
 
         </div>
-    </div>
+    </main>
+
+    <footer id="footer"></footer> <!-- Importing it using jquery  -->
 </body>
-<script src="./script/signup.js"></script>
+<script>
+    $(function () {
+        $("#navbar").load("navbar.html");
+    });
+    $(function () {
+        $("#footer").load("footer.html");
+    });
+</script>
+<script src="/scripts/signup.js"></script>
 
 </html>

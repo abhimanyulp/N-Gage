@@ -7,19 +7,8 @@ let numIn = document.getElementById("numIn")
 let webIn = document.getElementById("webIn")
 let submitBtn = document.getElementById("submitBtn")
 
-let homeLogo = document.getElementById("home")
-let loginBtn = document.getElementById("login-btn")
-
 
 // <-------------Event Listerners--------------->
-
-homeLogo.addEventListener("click", () => {
-    window.location.href = "/index.html"
-})
-
-loginBtn.addEventListener("click", () => {
-    window.location.href = "/login.html"
-})
 
 
 submitBtn.addEventListener("click", (e) => {

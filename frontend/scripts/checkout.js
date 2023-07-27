@@ -5,14 +5,8 @@ const baseServerURL = "https://n-gage.onrender.com"
 let userAuthToken = localStorage.getItem("localAccessToken") || null;
 let lsData = localStorage.getItem("email")
 
-let homeLogo = document.getElementById("home")
-let signupBtn = document.getElementById("signup-btn")
-let loginBtn = document.getElementById("login-btn")
 
 let lsEmail = localStorage.getItem("email")
-let loginEl = document.getElementById("login")
-let logoutEl = document.getElementById("logout")
-let logoutBtn = document.getElementById("logout-btn");
 
 let otpEl = document.getElementById("otp-box");
 let otpBtn = document.getElementById("input-btn");
@@ -43,41 +37,6 @@ let myplanBtn = document.getElementById("myplan-btn");
 
 
 // <-------------Event Listerners--------------->
-
-
-
-homeLogo.addEventListener("click", () => {
-    window.location.href = "/index.html"
-})
-
-signupBtn.addEventListener("click", () => {
-    window.location.href = "/signup.html"
-})
-
-loginBtn.addEventListener("click", () => {
-    window.location.href = "/login.html"
-})
-
-myplanBtn.addEventListener("click",()=>{
-    window.location.href = "/myplan.html"
-})
-
-window.addEventListener("load", (e) => {
-
-    if (lsEmail) {
-        loginEl.style.display = "none";
-        logoutEl.style.display = "flex";
-    }
-})
-
-logoutBtn.addEventListener("click", (e) => {
-    localStorage.setItem("email", "")
-    localStorage.setItem("localAccessToken", "")
-    location.reload()
-})
-
-
-
 
 
 if (plan_checkout == "basic") {

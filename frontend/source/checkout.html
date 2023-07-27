@@ -5,28 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="/style/checkout.css">
+    <link rel="stylesheet" href="/styles/checkout.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <div id="navbar">
-        <div id="nav-left">
-            <img src="./media/logo.png" alt="error" id="home">
-        </div>
-        <div id="nav-right">
-            <a href="products.html">Products</a>
-            <a href="./blog.html">Blog</a>
-            <a href="./about.html">About</a>
-            <div id="login">
-                <button id="login-btn">Login</button>
-                <button id="signup-btn">Sign-up</button>
-            </div>
-            <div id="logout">
-                <button id="logout-btn">Log-out</button>
-                <button id="myplan-btn">My plan</button>
-            </div>
-        </div>
-    </div>
-    <div id="main">
+    <nav id="navbar"></nav> <!-- Importing it using jquery  -->
+    
+    <main id="main">
         <div id="plan-checkout">
             <div id="basic" class="plan">
                 <div class="plan-tag">Basic</div>
@@ -103,7 +88,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </main>
     <div id="otp-box">
         <h1>Please Enter OTP</h1>
         <form action="#">
@@ -116,6 +101,16 @@
         </form>
         <input id="input-btn" type="submit">
     </div>
+
+    <footer id="footer"></footer> <!-- Importing it using jquery  -->
 </body>
-<script src="/script/checkout.js"></script>
+<script>
+    $(function () {
+        $("#navbar").load("navbar.html");
+    });
+    $(function () {
+        $("#footer").load("footer.html");
+    });
+</script>
+<script src="/scripts/checkout.js"></script>
 </html>

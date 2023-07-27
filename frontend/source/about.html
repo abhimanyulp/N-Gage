@@ -5,28 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="/styles/about.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <div id="navbar">
-        <div id="nav-left">
-            <img src="./media/logo.png" alt="error" id="home">
-        </div>
-        <div id="nav-right">
-            <a href="./products.html">Products</a>
-            <a href="./blog.html">Blog</a>
-            <a href=#>About</a>
-            <div id="login">
-                <button id="login-btn">Login</button>
-                <button id="signup-btn">Sign-up</button>
-            </div>
-            <div id="logout">
-                <button id="logout-btn">Log-out</button>
-                <button id="myplan-btn">My plan</button>
-            </div>
-        </div>
-    </div>
-    <div id="main">
+    <nav id="navbar"></nav> <!-- Importing it using jquery  -->
+
+    <main id="main">
         <h1>About N-Gage</h1>
         <p>Software is meant to solve problems. Complicated software only multiplies them. That is why we built EngageBay.
 
@@ -39,7 +24,17 @@
             Today, over 12,000 businesses use EngageBay to run their businesses. We are thankful for their trust in us.
             
             But this is just the beginning. Enjoy the journey with us!</p>
-    </div>
+    </main>
+
+    <footer id="footer"></footer> <!-- Importing it using jquery  -->
 </body>
-<script src="/script/about.js"></script>
+<script>
+    $(function () {
+        $("#navbar").load("navbar.html");
+    });
+    $(function () {
+        $("#footer").load("footer.html");
+    });
+</script>
+<script src="/scripts/about.js"></script>
 </html>
