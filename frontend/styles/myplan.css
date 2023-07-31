@@ -9,6 +9,7 @@
 #free {
     display: none;
 }
+
 #basic {
     display: none;
 }
@@ -22,54 +23,81 @@
 }
 
 .plan {
-    width: 50%;
+    /* width: 50%; */
     border-radius: 20px;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     padding: 30px;
 }
+
 .plan-tag {
     width: 50px;
     height: 25px;
-    background-color:azure;
+    background-color: azure;
     border-radius: 15px;
     text-align: center;
     margin: auto;
 }
-#growth > div:first-child {
+
+#growth>div:first-child {
     width: 80px;
 }
+
 .plan-price {
     text-align: center;
     /* border: 1px solid red; */
 }
-.plan-price > h1 {
+
+.plan-price>h1 {
     font-size: 70px;
     font-weight: 100;
 }
+
 .plan-details {
     text-align: center;
 }
-.plan-details > h3 {
+
+.plan-details>h3 {
     margin-top: 20px;
 }
-.plan-details > h3:first-child {
+
+.plan-details>h3:first-child {
     margin-top: 50px;
 }
 
 #myplan {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 50px;
+    padding-bottom: 70px;
 }
+
 .upgrade {
-    width: 50%;
+    /* width: 50%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: 2px solid red; */
 }
-.upgrade > h1 {
+
+.upgrade>h1 {
     margin-bottom: 50px;
 }
+
 #update-switch {
     width: 30%;
     height: 50px;
+}
+
+@media (max-width: 768px) {
+    #myplan {
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-flow: row dense;
+
+    }
+    .upgrade {
+        grid-row: 1;
+    }
 }
