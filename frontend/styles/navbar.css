@@ -1,88 +1,170 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
 #navbar {
     width: 100%;
     height: 60px;
     background-color: white;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
-    z-index:1;
+    z-index: 1;
     /* border: 2px solid red; */
 
 }
-#nav-left {
-    width: 50%;
-    margin: auto;
-    /* border: 2px solid black; */
+
+
+
+#nav-left>a>img {
+    width: 190px;
+    margin-left: 30px;
+    /* height: fit-content; */
+    /* border: 2px solid red; */
 }
-#nav-left > a > img {
-    width: 200px;
-    margin-left: 80px;
-}
+
 #nav-right {
     /* border: 2px solid blue; */
-    width: 50%;
+    width: 600px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-#nav-right > a {
+
+#nav-right>a {
     color: black;
     text-decoration: none;
+    font-size: 15px;
 }
 
 /* Login div */
-#login {
-    width: 35%;
+.options {
+    width: 215px;
     display: flex;
     justify-content: space-between;
+    /* border: 2px solid red; */
 }
-#login > a > button {
-    width: 110px;
+
+#login>a>button {
+    width: 100px;
     height: 35px;
     border: none;
     border-radius: 5px;
 }
-#login > a:first-child >  button {
+
+#login>a:first-child>button {
     color: white;
-    background-color:#CADFDF;
-}
-#login > a:nth-child(2) > button {
-    color: white;
-    background-color:#F9B347;
+    background-color: #CADFDF;
 }
 
-#login > a:first-child >  button:hover,
-#login > a:nth-child(2) > button:hover {
+#login>a:nth-child(2)>button {
+    color: white;
+    background-color: #F9B347;
+}
+
+#login>a:first-child>button:hover,
+#login>a:nth-child(2)>button:hover {
     /* color: black; */
-    background-color:black;
+    background-color: black;
     cursor: pointer;
 }
 
 /* logout div */
 #logout {
-    width: 35%;
-    justify-content: space-between;
     display: none;
 }
 
-#logout > a > button {
-    width: 110px;
+#logout>a>button {
+    width: 100px;
     height: 35px;
     border: none;
     border-radius: 5px;
 }
-#logout > a:first-child >  button {
+
+#logout>a:first-child>button {
     color: white;
-    background-color:#CADFDF;
-}
-#logout > a:nth-child(2) > button {
-    color: white;
-    background-color:#F9B347;
+    background-color: #CADFDF;
 }
 
-#logout > a:first-child >  button:hover,
-#logout > a:nth-child(2) > button:hover {
+#logout>a:nth-child(2)>button {
+    color: white;
+    background-color: #F9B347;
+}
+
+#logout>a:first-child>button:hover,
+#logout>a:nth-child(2)>button:hover {
     /* color: black; */
-    background-color:black;
+    background-color: black;
     cursor: pointer;
+}
+
+#hamburger {
+    width: 40px;
+    height: 30px;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+    display: none;
+    border-radius: 5px;
+    /* border: 2px solid red; */
+    text-decoration: none;
+}
+
+
+
+#hamburger:hover {
+
+    background-color: black;
+    color: white;
+
+}
+
+#expand {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200px;
+    background-color: whitesmoke;
+    z-index: 1;
+    padding: 20px;
+}
+
+#expand>ul>li {
+    list-style: none;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#expand>ul>li:hover {
+    text-decoration: underline;
+}
+
+#logout-btn-expand, #myplan-btn-expand {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    #hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5%;
+
+    }
+
+    #hamburger:hover {
+
+        background-color: black;
+        color: white;
+
+    }
+
+    #nav-right {
+        display: none;
+    }
 }

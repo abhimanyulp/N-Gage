@@ -4,80 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-#navbar {
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    display: flex;
-    position: sticky;
-    top: 0;
-    z-index:1;
-    /* border: 2px solid red; */
 
-}
-#nav-left {
-    width: 50%;
-    margin: auto;
-    /* border: 2px solid black; */
-}
-#nav-left > img {
-    width: 200px;
-    margin-left: 80px;
-}
-#nav-right {
-    /* border: 2px solid blue; */
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-#nav-right > a {
-    color: black;
-    text-decoration: none;
-}
-
-/* Login div */
-#login {
-    width: 35%;
-    display: flex;
-    justify-content: space-between;
-}
-#login > button {
-    width: 110px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-}
-#login > button:first-child {
-    color: white;
-    background-color:#CADFDF;
-}
-#login > button:nth-child(2) {
-    color: white;
-    background-color:#F9B347;
-}
-
-/* logout div */
-#logout {
-    width: 35%;
-    justify-content: space-between;
-    display: none;
-}
-
-#logout > button {
-    width: 110px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-}
-#logout > button:first-child {
-    color: white;
-    background-color:#CADFDF;
-}
-#logout > button:nth-child(2) {
-    color: white;
-    background-color:#F9B347;
-}
 #heading {
     width: 100%;
     height: 300px;
@@ -87,21 +14,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    text-align: center;
 }
 #plan-box {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     /* height: 800px; */
-    display: flex;
-    justify-content: space-evenly;
-    padding: 50px 0px;
+    /* display: flex;
+    justify-content: space-evenly; */
+    padding: 50px 50px;
     /* border: 2px solid red; */
 }
 .plan {
-    width: 20%;
+    position:relative;
+    width: 100%;
     border-radius: 10px;
     background-color: #CADFDF;
-    padding: 30px;
+    padding: 10%;
 }
 #growth {
     background-color:darkseagreen;
@@ -116,16 +47,19 @@
 }
 #growth > div:first-child {
     width: 80px;
+    /* border: 2px solid red; */
 }
 .plan-price {
     text-align: center;
     /* border: 1px solid red; */
 }
 .plan-price > h1 {
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 100;
+    text-align: center;
 }
 .plan-details > h3 {
+    font-size:small;
     margin-top: 20px;
 }
 .plan-details > h3:first-child {
@@ -133,13 +67,23 @@
 }
 
 .button-plan {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
     width: 100%;
     height: 50px;
     margin-top: 50px;
     border: none;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: cornflowerblue;
     color: white;
+    /* border: 2px solid red; */
+}
+
+.button-plan:hover {
+    background-color: black;
+    cursor: pointer;
 }
 #free > button {
     margin-top: 145px;
@@ -147,3 +91,28 @@
 #basic > button {
     margin-top: 190px;
 }
+
+
+@media (max-width: 768px) {
+    
+    .plan-price > h1 {
+        font-size: 40px;
+    }
+
+    #plan-box {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* @media (max-width: 1200px) {
+    
+    .plan-price > h1 {
+        font-size: 20px;
+    }
+
+} */
+
+

@@ -6,9 +6,30 @@
 }
 
 #main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
     text-align: center;
-    padding: 100px 200px 200px 200px;
+    padding: 5% 5% 20% 5%;
+    /* border: 2px solid red; */
 }
 #main > h1{
     margin: 50px;
+}
+
+#main > p {
+    max-width: 700px;
+    font-style:inherit ;
+    font-weight: 300;
+    font-size: large;
+}
+
+#title-1 {
+    color: #F9B347;
+}
+
+#title-2 {
+    color: #CADFDF;
 }

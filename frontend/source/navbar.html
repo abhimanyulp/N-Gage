@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 </head>
 
 <body>
@@ -20,14 +22,30 @@
         <a href="/source/products.html">Products</a>
         <a href="/source/blog.html">Blog</a>
         <a href="/source/about.html">About</a>
-        <div id="login">
+        <div id="login" class="options">
             <a href="/source/login.html"><button id="login-btn">Login</button></a>
             <a href="/source/signup.html"><button id="signup-btn">Sign-up</button></a>
         </div>
-        <div id="logout">
+        <div id="logout" class="options">
             <a href=#><button id="logout-btn">Log-out</button></a>
             <a href="/source/myplan.html"><button id="myplan-btn">My plan</button></a>
         </div>
+    </div>
+    <a id="hamburger" href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+
+    <div id="expand">
+        <ul>
+            <li><a href="/source/products.html">Products</a> </li>
+            <li><a href="/source/blog.html">Blog</a></li>
+            <li><a href="/source/about.html">About</a></li>
+            <li id="login-btn-expand"><a href="/source/login.html">Login</a></li>
+            <li id="signup-btn-expand"><a href="/source/signup.html">Sign-up</a></li>
+            <li id="logout-btn-expand"><a href=#>Logout</a></li>
+            <li id="myplan-btn-expand"><a href="/source/myplan.html">My plan</a></li>
+        </ul>
     </div>
     <!--end of Navigation bar-->
 

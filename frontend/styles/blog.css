@@ -4,90 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-#navbar {
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    display: flex;
-    position: sticky;
-    top: 0;
-    z-index:1;
-    /* border: 2px solid red; */
-
-}
-#nav-left {
-    width: 50%;
-    margin: auto;
-    /* border: 2px solid black; */
-}
-#nav-left > img {
-    width: 200px;
-    margin-left: 80px;
-}
-#nav-right {
-    /* border: 2px solid blue; */
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-#nav-right > a {
-    color: black;
-    text-decoration: none;
-}
-
-/* Login div */
-#login {
-    width: 35%;
-    display: flex;
-    justify-content: space-between;
-}
-#login > button {
-    width: 110px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-}
-#login > button:first-child {
-    color: white;
-    background-color:#CADFDF;
-}
-#login > button:nth-child(2) {
-    color: white;
-    background-color:#F9B347;
-}
-
-/* logout div */
-#logout {
-    width: 35%;
-    justify-content: space-between;
-    display: none;
-}
-
-#logout > button {
-    width: 110px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-}
-#logout > button:first-child {
-    color: white;
-    background-color:#CADFDF;
-}
-#logout > button:nth-child(2) {
-    color: white;
-    background-color:#F9B347;
-}
 
 #main {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    padding: 50px;
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 20px;
     /* border: 2px solid red; */
 }
 #left {
-    width: 40%;
+    /* width: 40%; */
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
@@ -106,19 +33,34 @@
     height: 250px;
 }
 #right {
-    padding: 100px;
-    width: 60%;
+    padding: 50px;
+    height: 700px;
+    /* width: 60%; */
     background-color:whitesmoke;
     border-radius: 30px;
     overflow: scroll;
 }
 
 .post-box {
-    width: 100%;
+    width: 90%;
     /* height: 200px; */
     margin: 20px;
     background-color:rgb(225, 224, 224);
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
+}
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    
+    #main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }

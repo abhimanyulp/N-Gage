@@ -44,23 +44,25 @@
 }
 #banner > h1 {
     margin-bottom: 10px;
+    text-align: center;
 }
 #banner > p {
     color: lightslategray;
+    text-align: center;
 }
 #details {
     margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 2px solid red; */
 }
-.details-box {
-    width: 100%;
-    height: 500px;
-    display: flex;
-}
+
 .details-boxes {
-    width: 50%;
+    /* width: 50%; */
     margin: 15px;
     border-radius: 10px;
     border: 1px solid lightgray;
+    padding-bottom: 30px;
 }
 .details-boxes-top {
     display: flex;
@@ -107,3 +109,12 @@ hr {
     color: lightgray;
 }
 
+@media (max-width: 768px) {
+    #details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #title > h1 {
+        font-size: 50px;
+    }
+}
